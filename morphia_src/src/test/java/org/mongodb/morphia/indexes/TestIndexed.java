@@ -237,7 +237,8 @@ public class TestIndexed extends TestBase {
     }
 
     @Indexes(@Index(fields = {@Field("active"), @Field(value = "lastModified", type = IndexType.DESC)},
-                       options = @IndexOptions(unique = true)))
+                             options = @IndexOptions(unique = true)
+            ))
     private static class Ad2 {
         @Id
         private long id;

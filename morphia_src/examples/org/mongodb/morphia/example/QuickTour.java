@@ -1,10 +1,12 @@
 package org.mongodb.morphia.example;
 
 import com.mongodb.MongoClient;
+
 import org.bson.types.ObjectId;
 import org.junit.Assert;
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
+import org.mongodb.morphia.annotations.CappedAt;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Field;
 import org.mongodb.morphia.annotations.Id;
@@ -83,7 +85,8 @@ public final class QuickTour {
     }
 }
 
-@Entity("employees")
+//@Entity(value="employees",cap = @CappedAt(count=1000,value=100*1024*1024))
+@Entity(value="employees",queryNonPrimary=true)
 @Indexes(@Index(value = "salary", fields = @Field("salary")))
 class Employee {
     @Id
