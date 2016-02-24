@@ -1,0 +1,11 @@
+/ContradictingFieldAnnotation.class
+/FieldConstraint.class
+/IdDoesNotMix.class
+/LazyReferenceMissingDependencies.class
+/LazyReferenceOnArray.class
+/MapKeyDifferentFromString.class
+/MapNotSerializable.class
+/MisplacedProperty.class
+/ReferenceToUnidentifiable.class
+/VersionMisuse.class
+/package-info.class
